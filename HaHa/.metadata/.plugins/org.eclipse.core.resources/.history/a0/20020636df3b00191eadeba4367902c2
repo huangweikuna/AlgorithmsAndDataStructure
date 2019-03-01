@@ -1,0 +1,13 @@
+package recursion;
+
+/*
+ * 226. Invert Binary Tree
+ * 		·­×ªÁ½¿Ã¶þ²æÊ÷
+ */
+public class LeetCode226 {
+	public int maxDepth(TreeNode root) {
+		if(root == null)
+			return 0;
+		return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+	}
+}

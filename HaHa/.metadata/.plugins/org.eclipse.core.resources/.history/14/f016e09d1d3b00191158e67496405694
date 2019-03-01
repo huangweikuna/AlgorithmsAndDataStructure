@@ -1,0 +1,50 @@
+/**
+ *
+ */
+package AVLTree;
+
+import java.util.ArrayList;
+
+public class AVLTree<K extends Comparable<K>, V> {
+	private class Node {
+		public K key;
+		public V value;
+		public Node left, right;
+		public int height;
+
+		public Node(K key, V value) {
+			this.key = key;
+			this.value = value;
+			left = null;
+			right = null;
+			height = 1;
+		}
+	}
+	private Node root;
+	private int size;
+	public AVLTree() {
+		root = null;
+		size = 0;
+	}
+	public int getSize() {
+		return size;
+	}
+	public boolean isEmpty() {
+		return size == 0;
+	}
+	public boolean isBST() {
+		ArrayList<K> keys = new ArrayList<>();
+		inOrder(root,keys);
+	}
+	
+	private void inOrder(Node node, ArrayList<K> keys) {
+		if(root == null)
+			return;
+		inOrder(node.left,keys);
+		keys.add(node.key);
+		inOrder(node.right,keys);
+	}
+	
+	
+	
+}
