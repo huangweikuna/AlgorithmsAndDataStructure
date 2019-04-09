@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;hwk&apos; to &apos;SpringIOC&apos;" description="Rename resource &apos;hwk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/hwk" name="SpringIOC" stamp="1551675103076" updateReferences="true"/>
-</session>
