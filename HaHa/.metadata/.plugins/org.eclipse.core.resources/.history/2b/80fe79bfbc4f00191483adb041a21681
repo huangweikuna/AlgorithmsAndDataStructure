@@ -1,0 +1,52 @@
+package test;
+
+import java.util.Scanner;
+
+public class Main {
+	static String str;
+
+	public static void main(String[] args) {
+		Scanner cin = new Scanner(System.in);
+		str = cin.nextLine();
+		
+		Thread t1 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				synchronized (cin) {
+					str += "_A";
+					cin.notifyAll();
+				}
+			}
+		});
+		Thread t2 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				synchronized (cin) {
+					try {
+						cin.wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					str += "_B";
+				}
+			}
+		});
+		Thread t3 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				synchronized (cin) {
+					try {
+						cin.wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					str += "_C";
+				}
+			}
+		});
+		t1.start();
+		t2.start();
+		t3.start();
+		System.out.println(str);
+	}
+}
