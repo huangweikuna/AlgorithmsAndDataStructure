@@ -6,6 +6,7 @@ public class SegmentTree<E> {
 	private E[] tree;
 	private Merger<E> merger;
 
+	@SuppressWarnings("unchecked")
 	public SegmentTree(E[] arr, Merger<E> merger) {
 		this.merger = merger;
 		data = (E[]) new Object[arr.length];

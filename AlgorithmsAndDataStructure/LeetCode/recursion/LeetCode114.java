@@ -1,8 +1,5 @@
 package recursion;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /*
  * 114. Flatten Binary Tree to Linked List
  * 

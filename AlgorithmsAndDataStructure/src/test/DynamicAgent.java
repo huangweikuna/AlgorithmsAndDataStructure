@@ -39,7 +39,7 @@ public class DynamicAgent {
         }
     }
     //返回一个被修改过的对象
-    public static Object agent(Class interfaceClazz, Object proxy) {
+    public static Object agent(@SuppressWarnings("rawtypes") Class interfaceClazz, Object proxy) {
         return Proxy.newProxyInstance(interfaceClazz.getClassLoader(), new Class[]{interfaceClazz},
                 new MyHandler(proxy));
     }    

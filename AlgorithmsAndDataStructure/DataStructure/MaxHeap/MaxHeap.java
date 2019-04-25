@@ -35,6 +35,7 @@ public class MaxHeap<E extends Comparable<E>> {
 		return index * 2 + 1;
 	}
 
+	@SuppressWarnings("unused")
 	private int rightChil(int index) {
 		// 如果是从1开始计的话为 index * 2 + 1
 		return index * 2 + 2;

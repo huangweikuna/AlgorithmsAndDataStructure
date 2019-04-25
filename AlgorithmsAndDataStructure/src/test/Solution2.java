@@ -1,8 +1,5 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Solution2 {
 	public class Node {
 		public String c;
@@ -78,6 +75,5 @@ public class Solution2 {
 		Class<?> cls = Class.forName("test.Solution2");
 		Solution2 s = (Solution2)cls.newInstance();
 		s.printRight("wwwwwwwwwaaaaaaaaas");
-		a c = new Solution2().new a();
 	}
 }

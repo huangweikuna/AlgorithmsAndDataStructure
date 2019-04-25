@@ -1,7 +1,5 @@
 package jianzhiOffer;
 
-import java.util.HashMap;
-
 /*
  * 	统计一个数字在排序数组中出现的次数。
  */
@@ -25,6 +23,7 @@ public class offer19 {
 	}
 	public static void main(String[] args) {
 		int []arr = {1,2,2,2,2,4};
-		new offer19().GetNumberOfK(arr, 2);
+		int res = new offer19().GetNumberOfK(arr,2);
+		System.out.println(res);
 	}
 }

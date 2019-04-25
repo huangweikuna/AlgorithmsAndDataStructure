@@ -4,6 +4,7 @@ public class MyList<T> {
 	int capacity;
 	T[] data;
 
+	@SuppressWarnings("unchecked")
 	MyList() {
 		data = (T[]) new Object[10];
 		size = 0;
@@ -28,6 +29,7 @@ public class MyList<T> {
 	}
 
 	private void resize(int i) {
+		@SuppressWarnings("unchecked")
 		T[] newData = (T[]) new Object[i];
 		for (int j = 0; j < size; j++) {
 			newData[j] = data[j];

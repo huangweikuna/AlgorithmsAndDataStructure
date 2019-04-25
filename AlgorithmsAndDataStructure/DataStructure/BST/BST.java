@@ -1,6 +1,5 @@
 package BST;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -189,6 +188,5 @@ public class BST<E extends Comparable<E>> {
 		}
 	}
 	public static void main(String[] args) {
-		ArrayList<ArrayList<Integer>> allList = new ArrayList<>();
 	}
 }

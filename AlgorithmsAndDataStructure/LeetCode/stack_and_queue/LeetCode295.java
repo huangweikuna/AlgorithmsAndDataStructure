@@ -1,7 +1,6 @@
 package stack_and_queue;
 
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 public class LeetCode295 {

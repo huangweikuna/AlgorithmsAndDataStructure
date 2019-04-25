@@ -6,6 +6,7 @@ public class Main {
 	static String str;
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner cin = new Scanner(System.in);
 		str = cin.nextLine();
 

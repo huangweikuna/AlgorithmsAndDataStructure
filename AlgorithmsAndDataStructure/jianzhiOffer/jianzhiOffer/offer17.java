@@ -12,11 +12,10 @@ public class offer17 {
 			max = Math.max(max + array[i], array[i]);
 			res = Math.max(max, res); 
 		}
-		return max;
+		return res;
 	}
 	public static void main(String[] args) {
 		int[] array = {4, -3, -2, 7, 8, -10, 2, 2};
-		int[] array2 = {-1,2,3,-4,7};
 		int a = new offer17().FindGreatestSumOfSubArray(array);
 		System.out.println(a);
 	}

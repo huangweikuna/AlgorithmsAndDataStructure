@@ -12,6 +12,7 @@ public class Trie {
 			next = new HashMap<>();
 		}
 
+		@SuppressWarnings("unused")
 		public Node(boolean isWord) {
 			this.isWord = isWord;
 			next = new HashMap<>();
@@ -68,7 +69,6 @@ public class Trie {
 //		String s2 = "abc"; 
 //		System.out.println(s1 == s2);// 输出false,因为一个是堆内存，一个是常量池的内存，故两者是不同的。
 //		System.out.println(s1.intern() == s2);// 输出true
-		B b = new B();
 	}
 }
 class A{

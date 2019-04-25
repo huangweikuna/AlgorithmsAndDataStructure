@@ -7,18 +7,19 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-// 文件相关操作
+// 鏂囦欢鐩稿叧鎿嶄綔
 public class FileOperation {
 
-    // 读取文件名称为filename中的内容，并将其中包含的所有词语放进words中
-    public static boolean readFile(String filename, ArrayList<String> words){
+    // 璇诲彇鏂囦欢鍚嶇О涓篺ilename涓殑鍐呭锛屽苟灏嗗叾涓寘鍚殑鎵�鏈夎瘝璇斁杩泈ords涓�
+    @SuppressWarnings("resource")
+	public static boolean readFile(String filename, ArrayList<String> words){
 
         if (filename == null || words == null){
             System.out.println("filename is null or words is null");
             return false;
         }
 
-        // 文件读取
+        // 鏂囦欢璇诲彇
         Scanner scanner;
 
         try {
@@ -36,9 +37,9 @@ public class FileOperation {
             return false;
         }
 
-        // 简单分词
-        // 这个分词方式相对简陋, 没有考虑很多文本处理中的特殊问题
-        // 在这里只做demo展示用
+        // 绠�鍗曞垎璇�
+        // 杩欎釜鍒嗚瘝鏂瑰紡鐩稿绠�闄�, 娌℃湁鑰冭檻寰堝鏂囨湰澶勭悊涓殑鐗规畩闂
+        // 鍦ㄨ繖閲屽彧鍋歞emo灞曠ず鐢�
         if (scanner.hasNextLine()) {
 
             String contents = scanner.useDelimiter("\\A").next();
@@ -57,7 +58,7 @@ public class FileOperation {
         return true;
     }
 
-    // 寻找字符串s中，从start的位置开始的第一个字母字符的位置
+    // 瀵绘壘瀛楃涓瞫涓紝浠巗tart鐨勪綅缃紑濮嬬殑绗竴涓瓧姣嶅瓧绗︾殑浣嶇疆
     private static int firstCharacterIndex(String s, int start){
 
         for( int i = start ; i < s.length() ; i ++ )
