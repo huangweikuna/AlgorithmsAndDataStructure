@@ -1,52 +1,18 @@
 package test;
 
-import java.util.Scanner;
 
 public class Main {
-	static String str;
 
 	public static void main(String[] args) {
-		@SuppressWarnings("resource")
-		Scanner cin = new Scanner(System.in);
-		str = cin.nextLine();
-
-		Thread t1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				str += "_A";
-			}
-		});
-		Thread t2 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					t1.join();
-					str += "_B";
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		Thread t3 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					t2.join();
-					str += "_C";
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		t1.start();
-		t2.start();
-		t3.start();
-		try {
-			t3.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		Integer a = -1;
+		int count = -1;
+		System.out.println("max:"  + Integer.toBinaryString(Integer.MAX_VALUE) + ":  " + Integer.MAX_VALUE);
+		System.out.println("-1 :"  + Integer.toBinaryString(-1));
+		System.out.println("-2 :" + Integer.toBinaryString(-1));
+		System.out.println("-3 :" + Integer.toBinaryString(-3));
+		while(count ++ < 32 ) {
+			System.out.println(-1 + " <<  " + count + " λ+:  " + Integer.toBinaryString(a) + "  :" + a);
+			a = a << 1;
 		}
-		System.out.println(str);
 	}
 }
