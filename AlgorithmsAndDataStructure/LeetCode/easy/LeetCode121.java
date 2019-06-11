@@ -1,4 +1,4 @@
-package easy;
+ package easy;
 
 public class LeetCode121 {
 	// 石头的最大利益 那一天买哪一天卖受益最大

@@ -15,5 +15,7 @@ public class Singleton {
 		}
 		return uniqueInstance;
 	}
-
+	public static void main(String[] args) {
+		System.out.println("s");
+	}
 }

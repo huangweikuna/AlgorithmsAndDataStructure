@@ -31,7 +31,7 @@ public class LeetCode77 {
 	}
 
 	public static void main(String[] args) {
-		int arr[] = { 1, 1, 3 };
+
 		List<List<Integer>> res = new LeetCode77().combine(4,2);
 		System.out.println(res.toString());
  	}
